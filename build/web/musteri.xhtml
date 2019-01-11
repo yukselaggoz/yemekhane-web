@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Yemekhane - Müşteri</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow"/>
+        <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content"/>
+        <meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    </h:head>
+    <h:body class="page">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+        </ul>
+        <div class="container">
+            <div class="section1">
+                <h1>ÜNİVERSİTE YEMEKHANE OTOMASYONU</h1>
+            </div>
+            <div class="header-bar">
+                <ul class="header">
+                    <li><a class="header-button" href="index.xhtml">Anasayfa</a></li>
+                    <li><a class="header-button" href="personel.xhtml">Personel</a></li>
+                    <li><a class="header-button" href="musteri.xhtml">Müşteriler</a></li>
+                    <li><a class="header-button" href="stok.xhtml">Stok Bilgisi</a></li>
+                    <li><a class="header-button" href="yemek_listesi.xhtml">Yemek Listesi</a></li>
+                    <li><a class="header-button" href="hakkinda.xhtml">Hakkında</a></li>
+                    <li><a class="header-button" href="iletisim.xhtml">İletişim</a></li>
+                    <li><a class="header-button" href="hesap.xhtml">Hesabım</a></li>
+                    <li><a class="header-button" href="login.xhtml">Çıkış</a></li>
+                </ul>
+            </div>
+            <div class="section2">
+                <h:form>
+                    <h:dataTable value="#{musteri.musteriListesi}" var="musteriObjesi">
+                        <h:column>
+                            <f:facet name="header">
+                                ID
+                            </f:facet>
+                            <h:outputText value="#{musteriObjesi.id}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                İsim
+                            </f:facet>
+                            <h:outputText value="#{musteriObjesi.isim}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Soyisim
+                            </f:facet>
+                            <h:outputText value="#{musteriObjesi.soyisim}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Bakiye
+                            </f:facet>
+                            <h:outputText value="#{musteriObjesi.bakiye}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </div>
+            <div class="footer">
+                <span class="footer-span">Koma Endazyaran &#x24B8;</span>
+            </div>
+        </div>
+    </h:body>
+</html>
+

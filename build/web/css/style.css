@@ -1,0 +1,229 @@
+/*background animation*/
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+}
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../images/arkaplan_1.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../images/arkaplan_2.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../images/arkaplan_3.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../images/arkaplan_4.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../images/arkaplan_5.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../images/arkaplan_6.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s; 
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+         -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+         -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+         -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+         -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+         animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
+
+/*font definition*/
+@font-face {
+    font-family: 'FuturaNewLight';
+    src: url('fonts/FuturaNewLight.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CSS reset */
+body,div,pre,form,fieldset,input,textarea,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,blockquote,th,td { 
+    margin:0;
+    padding:0;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+
+body{
+    color: gainsboro;
+    background-color: #000000;
+    font-size: 15px;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    border: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+.header-bar {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+}
+
+.header{
+    list-style: none;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+}
+
+.header > li{
+    display: inline;
+    padding: 10px;
+    width: 10.99999%;
+    line-height: 15px;
+    height: auto;
+    text-align: center;
+}
+
+.header-button{
+    vertical-align: top;
+    line-height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.section1{
+    padding-bottom: 40px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.section2 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footer{
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-span {
+    vertical-align: top;
+    line-height: 30px;
+    display: inline-block;
+    padding: 30px 150px;
+}
